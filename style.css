@@ -21,6 +21,17 @@ footer img {
     width: 3%;
 }
 
-.toppiccy{
-    size-adjust: 10%;
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #242457;
+    color: white;
+    padding: 3rem;
+}
+.flex-main {   
+    display: flex; 
+    background-color: #F5F5F5;
+    width: 100%;
+    padding-right: 2.5rem;
 }
