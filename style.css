@@ -25,6 +25,7 @@ body::before {
   
   body {
     position: relative; 
+  }
 
 .footer {
     width: 100%;
@@ -38,7 +39,6 @@ footer img {
     height: 50px;
 }
 
-
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -46,4 +46,42 @@ footer img {
     background-color: #242457;
     color: white;
     padding: 3rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links{
+    list-style-type: none;
+    width: 200px;
+}
+
+.nav-item{
+    display: block;
+    padding: 25px;
+    
+}
+
+.image-container{
+    height: 360px;
+    width: 600px;
+    /* background-color: #505FF9; */
+    margin: 2rem;
+    color: black;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    
 }
