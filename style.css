@@ -34,8 +34,10 @@ body::before {
     justify-content: space-around;
 }
 footer img {
-    width: 3%;
+    width: 50px;
+    height: 50px;
 }
+
 
 .sidebar {
     display: flex;
@@ -44,10 +46,4 @@ footer img {
     background-color: #242457;
     color: white;
     padding: 3rem;
-}
-.flex-main {   
-    display: flex; 
-    background-color: #F5F5F5;
-    width: 100%;
-    padding-right: 2.5rem;
 }
