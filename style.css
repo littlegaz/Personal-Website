@@ -85,3 +85,20 @@ footer img {
     display: flex;
     
 }
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.top-bar {
+    background-color: #f1ac16; 
+    color: black;
+    padding: 20px 0; /* 20px top and bottom, 0 left and right */
+}
+
+.bottom-bar {
+    background-color: rgb(238, 158, 10); 
+    color: black;
+    padding: 10px 0; /* 10px top and bottom, 0 left and right */
+}
