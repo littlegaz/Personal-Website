@@ -26,6 +26,7 @@
 
         <h2 class = "title">Lightbulb Selectors</h2>
         <h3 class = "subtitle">You've clicked the lights 0 times</h3>
+        <button class="reset">Reset the counter</button>
         <div id="wrapper">
           <div class="row">
             <div id="lightbulb1" class="item lightbulb active">💡</div>
@@ -43,12 +44,13 @@
         </footer>
         
         <script>
+            const button = document.querySelector(".reset")
             let lightbulb1 = document.querySelector("#lightbulb1")
-let lightbulb2 = document.querySelector("#lightbulb2")
-let lightbulb3 = document.querySelector("#lightbulb3")
+            let lightbulb2 = document.querySelector("#lightbulb2")
+            let lightbulb3 = document.querySelector("#lightbulb3")
 
-let subtitle = document.querySelector(".subtitle")
-let count = 0
+            let subtitle = document.querySelector(".subtitle")
+            let count = 0
 
 lightbulb1.addEventListener("click", function (){
     count++;
@@ -66,6 +68,11 @@ lightbulb3.addEventListener("click", function (){
     count++;
     subtitle.innerHTML = `You've clicked the lights ${count} times`;
     this.classList.toggle("active");
+})
+
+button.addEventListener("click", function (){
+    count = 0;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
 })
         </script>
     </body> 

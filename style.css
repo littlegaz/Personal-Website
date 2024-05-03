@@ -203,3 +203,8 @@ h6{
 .subtitle {
     font-size: 2em;
 }
+
+.reset {
+    display: block;
+    margin: 0 auto;
+}
