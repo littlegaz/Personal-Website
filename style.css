@@ -76,10 +76,10 @@ footer img {
 }
 
 .image-containerAM{
-    height: 441px;
-    width: 630px;
+    height: 350px;
+    width: 500px;
     /* background-color: #505FF9; */
-    margin: 4rem;
+    margin: 3rem;
     margin-bottom: 0rem;
     color: black;
     border: solid black 1px;
@@ -90,9 +90,9 @@ footer img {
 
 .text-containerAM{
     height: 100px;
-    width: 630px;
+    width: 500px;
     /* background-color: #505FF9; */
-    margin: 4rem;
+    margin: 3rem;
     margin-top: 0px;
     color: black;
     border: clear 1px;
@@ -139,7 +139,7 @@ footer img {
 
 h6{
     font-family: fantasy;
-    font-size: larger;
+    font-size: xx-large;
 }
 
 
