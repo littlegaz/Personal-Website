@@ -20,7 +20,7 @@ body::before {
     background-image: url('https://wallpapertag.com/wallpaper/full/a/3/c/139761-yellow-backgrounds-1920x1080-high-resolution.jpg');
     background-size: cover;
     opacity: 0.5; 
-    z-index: -1; 
+    z-index: -1;
   }
   
   body {
@@ -135,6 +135,11 @@ footer img {
 .bio-image{
     height: 360px
     width 600px;
+}
+
+h6{
+    font-family: fantasy;
+    font-size: larger;
 }
 
 

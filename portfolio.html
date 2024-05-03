@@ -33,7 +33,7 @@
             <div id="lightbulb3" class="item lightbulb">💡</div>
           </div>
         </div>
-    </body>    
+       
 
         <footer class="footer">
             <a id="footerface" href="https://www.facebook.com/KingGargeth"> <img src="facebook.png" alt="facebook"> </a>
@@ -42,6 +42,31 @@
             <a id="footeryou" href="https://www.youtube.com/channel/UC3s_Z_tmnFG0VLPrYDmfJjQ"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/YouTube_dark_icon_%282017%29.svg/1200px-YouTube_dark_icon_%282017%29.svg.png" alt = "youtube"/></a>
         </footer>
         
-        <script src="script.js"></script>
-    
+        <script>
+            let lightbulb1 = document.querySelector("#lightbulb1")
+let lightbulb2 = document.querySelector("#lightbulb2")
+let lightbulb3 = document.querySelector("#lightbulb3")
+
+let subtitle = document.querySelector(".subtitle")
+let count = 0
+
+lightbulb1.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb2.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb3.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+        </script>
+    </body> 
 </html>
