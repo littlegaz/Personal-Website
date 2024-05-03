@@ -26,12 +26,22 @@
 
         <h2 class = "title">Lightbulb Selectors</h2>
         <h3 class = "subtitle">You've clicked the lights 0 times</h3>
+        <h3 class = "subsubtitle">You've reset the counter 0 times</h3>
         <button class="reset">Reset the counter</button>
         <div id="wrapper">
           <div class="row">
             <div id="lightbulb1" class="item lightbulb active">💡</div>
             <div id="lightbulb2" class="item lightbulb">💡</div>
             <div id="lightbulb3" class="item lightbulb">💡</div>
+            <div id="lightbulb4" class="item lightbulb active">💡</div>
+            <div id="lightbulb5" class="item lightbulb">💡</div>
+            <div id="lightbulb6" class="item lightbulb">💡</div>
+            <div id="lightbulb7" class="item lightbulb active">💡</div>
+            <div id="lightbulb8" class="item lightbulb">💡</div>
+            <div id="lightbulb9" class="item lightbulb">💡</div>
+            <div id="lightbulb10" class="item lightbulb active">💡</div>
+            <div id="lightbulb11" class="item lightbulb">💡</div>
+            <div id="lightbulb12" class="item lightbulb">💡</div>
           </div>
         </div>
        
@@ -48,9 +58,20 @@
             let lightbulb1 = document.querySelector("#lightbulb1")
             let lightbulb2 = document.querySelector("#lightbulb2")
             let lightbulb3 = document.querySelector("#lightbulb3")
+            let lightbulb4 = document.querySelector("#lightbulb4")
+            let lightbulb5 = document.querySelector("#lightbulb5")
+            let lightbulb6 = document.querySelector("#lightbulb6")
+            let lightbulb7 = document.querySelector("#lightbulb7")
+            let lightbulb8 = document.querySelector("#lightbulb8")
+            let lightbulb9 = document.querySelector("#lightbulb9")
+            let lightbulb10 = document.querySelector("#lightbulb10")
+            let lightbulb11 = document.querySelector("#lightbulb11")
+            let lightbulb12 = document.querySelector("#lightbulb12")
 
             let subtitle = document.querySelector(".subtitle")
+            let subsubtitle = document.querySelector(".subsubtitle")
             let count = 0
+            let resetcount = 0
 
 lightbulb1.addEventListener("click", function (){
     count++;
@@ -70,9 +91,65 @@ lightbulb3.addEventListener("click", function (){
     this.classList.toggle("active");
 })
 
+lightbulb4.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb5.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb6.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb7.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb8.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb9.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb10.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb11.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
+lightbulb12.addEventListener("click", function (){
+    count++;
+    subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    this.classList.toggle("active");
+})
+
 button.addEventListener("click", function (){
     count = 0;
+    resetcount++;
     subtitle.innerHTML = `You've clicked the lights ${count} times`;
+    subsubtitle.innerHTML = `You've reset the counter ${resetcount} times`;
 })
         </script>
     </body> 

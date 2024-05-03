@@ -191,7 +191,7 @@ h6{
     box-shadow: 0 0 35px white;
 }
 
-.title, .subtitle {
+.title, .subtitle, .subsubtitle {
     color: black;
     text-align: center;
 }
