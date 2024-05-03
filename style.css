@@ -53,15 +53,14 @@ footer img {
     justify-content: center;
 }
 
-.nav-links{
+.nav-links {
     list-style-type: none;
-    width: 200px;
+    display: flex; /* This will align .nav-item elements in a row */
+    padding: 0; /* Resets default padding */
 }
 
-.nav-item{
-    display: block;
-    padding: 25px;
-    
+.nav-item {
+    padding: 5px; /* Adjust padding as needed */
 }
 
 .image-container{
@@ -101,4 +100,9 @@ footer img {
     background-color: rgb(238, 158, 10); 
     color: black;
     padding: 10px 0; /* 10px top and bottom, 0 left and right */
+}
+
+.bio-image{
+    height: 360px
+    width 600px;
 }
