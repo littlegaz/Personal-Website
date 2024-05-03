@@ -60,7 +60,7 @@ footer img {
 }
 
 .nav-item {
-    padding: 5px; /* Adjust padding as needed */
+    padding: 5px; 
 }
 
 .image-container{
@@ -114,6 +114,7 @@ footer img {
 .header {
     width: 100%;
     text-align: center;
+    
 }
 
 .top-bar {
@@ -126,9 +127,74 @@ footer img {
     background-color: rgb(238, 158, 10); 
     color: black;
     padding: 10px 0; /* 10px top and bottom, 0 left and right */
+    mix-blend-mode: multiply;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .bio-image{
     height: 360px
     width 600px;
+}
+
+
+
+/*this is the lightbulb code
+*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } html { font-family: sans-serif; }
+
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
+}*/
+
+/*body {
+    background-color: black;
+}
+*/
+
+#wrapper {
+    width: 90vw;
+    max-width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-top: 0;
+    min-height: 100vh;
+}
+
+.row {
+    padding-top: 25px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    margin: 20px;
+    transition: 0.2s;
+}
+
+.lightbulb {
+    font-size: 10vw;
+}
+
+.active {
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 35px white;
+}
+
+.title, .subtitle {
+    color: black;
+    text-align: center;
+}
+
+.title {
+    font-size: 4em;
+}
+
+.subtitle {
+    font-size: 2em;
 }
