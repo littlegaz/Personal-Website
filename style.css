@@ -65,9 +65,21 @@ footer img {
 
 .image-container{
     height: 360px;
-    width: 600px;
+    width: 500px;
     /* background-color: #505FF9; */
-    margin: 2rem;
+    margin: 3rem;
+    color: black;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-containerAM{
+    height: 441px;
+    width: 630px;
+    /* background-color: #505FF9; */
+    margin: 3rem;
     color: black;
     border: solid black 1px;
     display: flex;
