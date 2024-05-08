@@ -1,11 +1,14 @@
 h1 {
-    background-color: #f1ef5f;
+    background-image: linear-gradient(to top left, rgb(240, 68, 16), rgb(241, 238, 18));
     color: black;
     width: 25%;
     padding: 50px;
     margin: 1em auto;
-    border: 10px solid #f1ac16;
-    box-shadow: 10px 10px rgb(238, 158, 10);
+    border: 10px; 
+    border-image: linear-gradient(to top left, rgb(220, 68, 16), rgb(221, 238, 18)) 1;
+    box-shadow: 3px 3px rgb(240, 68, 16), 
+    6px 6px rgb(230, 68, 16), 
+    9px 9px rgb(220, 68, 16);
     display: flex;
     justify-content: center;
 }
@@ -30,7 +33,7 @@ body::before {
 .footer {
     width: 100%;
     padding: 1rem;
-    background-color: #f1ac16;
+    background-image: linear-gradient(to bottom right, rgb(240, 68, 16), rgb(241, 238, 18));
     display: flex;
     justify-content: space-around;
 }
@@ -117,19 +120,21 @@ footer img {
     
 }
 
-.top-bar {
+/*.top-bar {
     background-color: #f1ac16; 
     color: black;
-    padding: 20px 0; /* 20px top and bottom, 0 left and right */
-}
+    padding: 20px 0;
+}*/
 
 .bottom-bar {
-    background-color: rgb(238, 158, 10); 
-    color: black;
+    
+    height: 200px;
     padding: 10px 0; /* 10px top and bottom, 0 left and right */
     mix-blend-mode: multiply;
     display: flex;
     justify-content: flex-end;
+    background-image: linear-gradient(to bottom right, rgb(240, 68, 16), rgb(241, 238, 18));
+    
 }
 
 .bio-image{
