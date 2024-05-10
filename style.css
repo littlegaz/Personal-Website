@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     background-image: linear-gradient(to top left, rgb(240, 68, 16), rgb(241, 238, 18));
     color: black;
     width: 25%;
@@ -11,7 +11,7 @@ h1 {
     9px 9px rgb(220, 68, 16);
     display: flex;
     justify-content: center;
-}
+} */
 
 body::before {
     content: "";
@@ -272,4 +272,12 @@ h6{
   .dropdown-content a:hover {
     color: #FFFFFF;
     background-color: #f39213;
+  }
+
+  .headerText {
+    font-size: 50px;
+    font-family: Times, serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
   }
