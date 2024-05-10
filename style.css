@@ -28,16 +28,18 @@ body::before {
   
   body {
     position: relative; 
+    top: 75px;
   }
 
 .footer {
     position: fixed;
+    text-align: center;
     bottom: 0px;
     left: 0px;
     width: 100%;
     padding: 1rem;
     background-image: linear-gradient(to bottom right, rgb(240, 68, 16), rgb(241, 238, 18));
-    display: flex;
+    /* display: flex; */
     justify-content: space-around;
 }
 footer img {
@@ -119,15 +121,8 @@ footer img {
 
 .header {
     width: 100%;
-    text-align: center;
-    
+    text-align: center; 
 }
-
-/*.top-bar {
-    background-color: #f1ac16; 
-    color: black;
-    padding: 20px 0;
-}*/
 
 .bottom-bar {
     position: fixed;
@@ -138,7 +133,6 @@ footer img {
     display: flex;
     justify-content: flex-end;
     background-image: linear-gradient(to bottom right, rgb(240, 68, 16), rgb(241, 238, 18));
-    
 }
 
 .bio-image{
@@ -282,5 +276,5 @@ h6{
     font-size: 50px;
     font-family: Times, serif;
     position: absolute;
-    left: 47.5%;
+    left: 5%;
   }
