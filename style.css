@@ -31,6 +31,9 @@ body::before {
   }
 
 .footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
     padding: 1rem;
     background-image: linear-gradient(to bottom right, rgb(240, 68, 16), rgb(241, 238, 18));
@@ -127,10 +130,11 @@ footer img {
 }*/
 
 .bottom-bar {
-    
-    height: 150px;
-    padding: 10px 0; /* 10px top and bottom, 0 left and right */
-    mix-blend-mode: multiply;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 75px;
+    padding: 10px; 
     display: flex;
     justify-content: flex-end;
     background-image: linear-gradient(to bottom right, rgb(240, 68, 16), rgb(241, 238, 18));
@@ -239,13 +243,13 @@ h6{
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
+    /* display: none;
+    position: absolute; */
     top: 40px;
     right: 10px;
-    background-color: #f1f1f1;
+    background-color: #fdefb0;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
 }
 
@@ -278,6 +282,5 @@ h6{
     font-size: 50px;
     font-family: Times, serif;
     position: absolute;
-    top: 10%;
-    left: 50%;
+    left: 47.5%;
   }
