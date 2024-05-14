@@ -345,5 +345,21 @@ ON restaurants.ID = menus.restaurant_id
 JOIN menuItems
 ON menus.id = menuItems.menu_id
 
+SELECT restaurants.name, menus.title, menuItems.name
+FROM restaurants
+LEFT JOIN menus
+ON restaurants.ID = menus.restaurant_id
+LEFT JOIN menuItems
+ON menus.id = menuItems.menu_id
 
+SELECT menus.title, menuItems.name, menuItems.price
+FROM menus
+JOIN menuItems
+ON menus.id = menuItems.menu_id
+WHERE menus.title = 'Wines'
 
+SELECT menus.title, menuItems.name, menuItems.price
+FROM menus
+JOIN menuItems
+ON menus.id = menuItems.menu_id
+WHERE menuItems.price < 30
