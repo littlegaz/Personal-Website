@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            #gameContainer {
+                margin: auto;
+                width: 50%;
+                padding: 10px;
+                text-align: center;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            </style>
         <div class="header">
             <div class="bottom-bar">
                 <div class="headerText">    
@@ -37,7 +50,13 @@
     </head>
    
     <body>
-        
+        <h2><center>Automated Rock, Paper, Scissors Game</center></h2>
+<div id="gameContainer">
+    <button id="startGame">Play Game</button>
+    <p id="playerChoice">Player's Choice: </p>
+    <p id="computerChoice">Computer's Choice: </p>
+    <p id="result">Result: </p>
+</div>
           
         
 
@@ -55,6 +74,29 @@
         </footer>
         
 
+        <script>document.getElementById('startGame').addEventListener('click', function() {
+            const choices = ['Rock', 'Paper', 'Scissors'];
+            const playerChoice = choices[Math.floor(Math.random() * 3)];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            const result = determineWinner(playerChoice, computerChoice);
         
+            document.getElementById('playerChoice').textContent = "Player's Choice: " + playerChoice;
+            document.getElementById('computerChoice').textContent = "Computer's Choice: " + computerChoice;
+            document.getElementById('result').textContent = "Result: " + result;
+        });
+        
+        function determineWinner(playerChoice, computerChoice) {
+            if (playerChoice === computerChoice) {
+                return "It's a tie!";
+            }
+        
+            if ((playerChoice === 'Rock' && computerChoice === 'Scissors') || 
+                (playerChoice === 'Paper' && computerChoice === 'Rock') || 
+                (playerChoice === 'Scissors' && computerChoice === 'Paper')) {
+                return "Player wins!";
+            } else {
+                return "Computer wins!";
+            }
+        }</script>
     </body> 
 </html>
