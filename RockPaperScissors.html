@@ -52,10 +52,25 @@
     <body>
         <h2><center>Automated Rock, Paper, Scissors, Lizard, Spock</center></h2>
 <div id="gameContainer">
-    <button id="startGame">Play Game</button>
-    <p id="playerChoice">Player's Choice: </p>
-    <p id="computerChoice">Computer's Choice: </p>
-    <p id="result">Result: </p>
+    <!-- <button id="startGame">Play Game</button> -->
+    <div id="playerDisplay">Player's Choice: </div>
+    <div id="computerDisplay">Computer's Choice: </div>
+    <div id="resultDisplay">Result: </div>
+</div>
+
+<div class="choices">
+    <button onclick="playgame('Rock')">🗿</button>
+    <button onclick="playgame('Paper')">🧻</button>
+    <button onclick="playgame('Scissors')">✂</button>
+    <button onclick="playgame('Lizard')">🦎</button>
+    <button onclick="playgame('Spock')">🖖</button>
+</div>
+
+<div class="scoreDisplay">Player Score:
+    <span id="playerScoreDisplay">0</span>
+</div>
+<div class="scoreDisplay">Computer Score:
+    <span id="computerScoreDisplay">0</span>
 </div>
           
         
@@ -74,36 +89,53 @@
         </footer>
         
 
-        <script>document.getElementById('startGame').addEventListener('click', function() {
-            const choices = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
-            const playerChoice = choices[Math.floor(Math.random() * 5)];
-            const computerChoice = choices[Math.floor(Math.random() * 5)];
-            const result = determineWinner(playerChoice, computerChoice);
+        <script>
+            const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+            const playerDisplay = document.getElementById("playerDisplay");
+            const computerDisplay = document.getElementById("computerDisplay");
+            const resultDisplay = document.getElementById("resultDisplay");
+            const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+            const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+
+            let playerScore = 0;
+            let computerScore = 0;
+
+
+
+            function playgame(playerChoice)
+        {
+                const computerChoice = choices[Math.floor(Math.random() * 5)];
+                // console.log(computerChoice);
+                let result = "";
+
+                if (playerChoice === computerChoice) 
+                {result = "It's a tie!";}
         
-            document.getElementById('playerChoice').textContent = "Player's Choice: " + playerChoice;
-            document.getElementById('computerChoice').textContent = "Computer's Choice: " + computerChoice;
-            document.getElementById('result').textContent = "Result: " + result;
-        });
+                else if ((playerChoice === 'Rock' && computerChoice === 'Scissors') ||
+                    (playerChoice === 'Rock' && computerChoice === 'Lizard') || 
+                    (playerChoice === 'Paper' && computerChoice === 'Rock') || 
+                    (playerChoice === 'Paper' && computerChoice === 'Spock') ||
+                    (playerChoice === 'Spock' && computerChoice === 'Rock') ||
+                    (playerChoice === 'Spock' && computerChoice === 'Scissors') ||
+                    (playerChoice === 'Lizard' && computerChoice === 'Spock') ||
+                    (playerChoice === 'Lizard' && computerChoice === 'Paper') ||
+                    (playerChoice === 'Scissors' && computerChoice === 'Lizard') ||
+                    (playerChoice === 'Scissors' && computerChoice === 'Paper')) 
+                    {result = "Player wins!";
+                        playerScore++;
+                        playerScoreDisplay.textContent = playerScore;
+                    } 
+                    else 
+                    {result = "Computer wins!";
+                        computerScore++;
+                        computerScoreDisplay.textContent = computerScore;
+                    }
+
+            playerDisplay.textContent = "Player's Choice: " + playerChoice;
+            computerDisplay.textContent = "Computer's Choice: " + computerChoice;
+            resultDisplay.textContent = "Result: " + result;
+        }
         
-        function determineWinner(playerChoice, computerChoice) {
-            if (playerChoice === computerChoice) {
-                return "It's a tie!";
-            }
-        
-            if ((playerChoice === 'Rock' && computerChoice === 'Scissors') ||
-                (playerChoice === 'Rock' && computerChoice === 'Lizard') || 
-                (playerChoice === 'Paper' && computerChoice === 'Rock') || 
-                (playerChoice === 'Paper' && computerChoice === 'Spock') ||
-                (playerChoice === 'Spock' && computerChoice === 'Rock') ||
-                (playerChoice === 'Spock' && computerChoice === 'Scissors') ||
-                (playerChoice === 'Lizard' && computerChoice === 'Spock') ||
-                (playerChoice === 'Lizard' && computerChoice === 'Paper') ||
-                (playerChoice === 'Scissors' && computerChoice === 'Lizard') ||
-                (playerChoice === 'Scissors' && computerChoice === 'Paper')) {
-                return "Player wins!";
-            } else {
-                return "Computer wins!";
-            }
-        }</script>
+        </script>
     </body> 
 </html>
