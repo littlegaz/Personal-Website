@@ -53,7 +53,17 @@
         <input type="text" id="rectangleWidth"><br><br>
         <button id="rectangleSubmit">Submit</button>
         <h3 id="rectangleH3"></h3>
-        <h3 id="rectangleError"></h3><br><br><br>
+        <!-- <h3 id="rectangleError"></h3> -->
+        <br><br><br>
+
+        <h1 id="shapesH1">Enter the base and height of a triangle</h1>
+        <label>Base</label>
+        <input type="text" id="triangleBase"><br><br>
+        <label>Height</label>
+        <input type="text" id="triangleHeight"><br><br>
+        <button id="triangleSubmit">Submit</button>
+        <h3 id="triangleH3"></h3>
+        <br><br><br>
 
 
       
@@ -111,6 +121,18 @@
                 rectangleDiagonal = Math.sqrt(rectangleLength**2 + rectangleWidth**2);
                 document.getElementById("rectangleH3").textContent = `The hypotenuse is ${rectangleDiagonal.toFixed(2)}cm and the area of the rectangle is ${rectangleArea}cm^2`;
                 // document.getElementById("rectangleError").textContent = "";
+            }
+
+            let triangleBase;
+            let triangleHeight;
+            let triangleArea;
+            document.getElementById("triangleSubmit").onclick = function (){
+                triangleBase = document.getElementById("triangleBase").value;
+                triangleBase = Number(triangleBase);
+                triangleHeight = document.getElementById("triangleHeight").value;
+                triangleHeight = Number(triangleHeight);
+                triangleArea = triangleBase * triangleHeight / 2;
+                document.getElementById("triangleH3").textContent = `The area of the triangle is ${triangleArea}cm^2`; 
             }
 
 
