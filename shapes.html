@@ -4,7 +4,7 @@
         <div class="header">
             <div class="bottom-bar">
                 <div class="headerText">    
-                    Portfolio
+                    Shapes
                 </div> 
                 <div class="dropdown">
                     <div class="menu" onClick="menuIcon(this)">
@@ -29,31 +29,34 @@
                     </div>
                 </div>
             </div>                       
-        </div>    
-
-                <!-- <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html"><img src="home.png" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="bio.html"><img src="about me.png" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="experience.html"><img src="experience.jpg" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="portfolio main.html"><img src="portfolio.png" height= 50px width= 50px;></a></li> -->
-                <!-- </ul> -->
-           
-
-        
-
-        <title>Personal Profile</title>
+        </div>                 
+        <title>Shapes</title>
         <link rel="stylesheet" href="style.css" />
-
     </head>
-   
     <body>
-        <h2>Here is a sample of my work:</h2>
-                  
-        <p></p>
+        <h1 id="shapesH1">Enter the radius of a circle</h1>
+        <label>Radius</label>
+        <input type="text" id="circleText"><br><br>
+        <button id="circleSubmit">Submit</button>
+        <h3 id="circleH3"></h3><br><br><br>
 
-        <a href="lightbulbs.html">Click here for chaos with lightbulbs</a><br><br>
-        <a href="RockPaperScissors.html">Click here for a game of Rock Paper Scissors</a><br><br>
-        <a href="shapes.html">Click here for shapes calculations</a><br><br>
+        <h1 id="shapesH1">Enter the length of a square</h1>
+        <label>Length</label>
+        <input type="text" id="squareText"><br><br>
+        <button id="squareSubmit">Submit</button>
+        <h3 id="squareH3"></h3><br><br><br>
+
+        <h1 id="shapesH1">Enter the length and width of a rectangle</h1>
+        <label>Length</label>
+        <input type="text" id="rectangleLength"><br><br>
+        <label>Width</label>
+        <input type="text" id="rectangleWidth"><br><br>
+        <button id="rectangleSubmit">Submit</button>
+        <h3 id="rectangleH3"></h3>
+        <h3 id="rectangleError"></h3><br><br><br>
+
+
+      
 
         <footer class="footer">
             <a id="footerface" href="https://www.facebook.com/KingGargeth"> <img src="images/facebook.png" alt="facebook"> </a>
@@ -67,6 +70,52 @@
             </div>
         </footer>
     
-        <script src="script.js"></script>
+        <script>
+            const pi = 3.142;
+            let radius;
+            let circumference;
+            let circleArea;
+            document.getElementById("circleSubmit").onclick = function(){
+                radius = document.getElementById("circleText").value;
+                radius = Number(radius);
+                circumference = 2 * pi * radius;
+                circleArea = pi * radius**2;
+                document.getElementById("circleH3").textContent = `The circumference of the circle is ${circumference.toFixed(2)}cm and the area of the circle is ${circleArea.toFixed(2)}cm^2`;
+            }
+
+            let squareLength;
+            let squareDiagonal;
+            let squareArea;
+            document.getElementById("squareSubmit").onclick = function(){
+                squareLength = document.getElementById("squareText").value;
+                squareLength = Number(squareLength);
+                squareArea = squareLength**2;
+                squareDiagonal = Math.sqrt(squareLength**2 + squareLength**2);
+                document.getElementById("squareH3").textContent = `The distance of two opposite corners is ${squareDiagonal.toFixed(2)}cm and the area of the square is ${squareArea}cm^2`;
+            }
+
+            let rectangleLength;
+            let rectangleWidth;
+            let rectangleDiagonal;
+            let rectangleArea;
+            document.getElementById("rectangleSubmit").onclick = function (){
+                rectangleLength = document.getElementById("rectangleLength").value;
+                rectangleLength = Number(rectangleLength);
+                // if (rectangleLength <= 0){document.getElementById("rectangleError").textContent = `Please enter a valid length greater than 0.`}; return;
+                // else{document.getElementById("rectangleError").textContent = "";}
+                rectangleWidth = document.getElementById("rectangleWidth").value;
+                rectangleWidth = Number(rectangleWidth);
+                // if (rectangleWidth <= 0){document.getElementById("rectangleError").textContent = `Please enter a valid width greater than 0.`}; return;
+                // elsedocument.getElementById("rectangleError").textContent = "";
+                rectangleArea = rectangleLength * rectangleWidth;
+                rectangleDiagonal = Math.sqrt(rectangleLength**2 + rectangleWidth**2);
+                document.getElementById("rectangleH3").textContent = `The hypotenuse is ${rectangleDiagonal.toFixed(2)}cm and the area of the rectangle is ${rectangleArea}cm^2`;
+                // document.getElementById("rectangleError").textContent = "";
+            }
+
+
+
+
+        </script>
     </body>
 </html>
