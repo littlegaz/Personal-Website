@@ -4,7 +4,7 @@
         <div class="header">
             <div class="bottom-bar">
                 <div class="headerText">    
-                    Portfolio
+                    Counter
                 </div> 
                 <div class="dropdown">
                     <div class="menu" onClick="menuIcon(this)">
@@ -29,32 +29,32 @@
                     </div>
                 </div>
             </div>                       
-        </div>    
+        </div>
 
-                <!-- <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html"><img src="home.png" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="bio.html"><img src="about me.png" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="experience.html"><img src="experience.jpg" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="portfolio main.html"><img src="portfolio.png" height= 50px width= 50px;></a></li> -->
-                <!-- </ul> -->
-           
-
-        
-
-        <title>Personal Profile</title>
+        <title>Counter</title>
         <link rel="stylesheet" href="style.css" />
-
     </head>
-   
-    <body>
-        <h2>Here is a sample of my work:</h2>
-                  
-        <p></p>
+    <body><br><br><br>
+        <label id="countLabel">0</label>
+            <div id="countButtonMain">
+                <button id="decreaseButton" class="countButtonMain">Decrease</button>
+                <button id="resetButton" class="countButtonMain">Reset</button>
+                <button id="increaseButton" class="countButtonMain">Increase</button>
+            </div><br>
+            <div id="countButtonExtra">
+                <button id="decreaseButton10" class="countButtonExtra">-10</button>
+                <button id="decreaseButton5" class="countButtonExtra">-5</button>
+                <button id="decreaseButton2" class="countButtonExtra">-2</button>
+                <button id="increaseButton2" class="countButtonExtra">+2</button>
+                <button id="increaseButton5" class="countButtonExtra">+5</button>
+                <button id="increaseButton10" class="countButtonExtra">+10</button>
+            </div><br>
+            <div id="countButtonRandom">
+                <button id="decreaseButtonRandom" class="countButtonRandom">Random Decrease</button>
+                <button id="increaseButtonRandom" class="countButtonRandom">Random Increase</button>
+            </div>
+          
 
-        <a href="lightbulbs.html">Click here for chaos with lightbulbs</a><br><br>
-        <a href="RockPaperScissors.html">Click here for a game of Rock Paper Scissors</a><br><br>
-        <a href="shapes.html">Click here for shapes calculations</a><br><br>
-        <a href="counter.html">Click here for a uniquely functioning counter</a><br><br>
 
         <footer class="footer">
             <a id="footerface" href="https://www.facebook.com/KingGargeth"> <img src="images/facebook.png" alt="facebook"> </a>
@@ -67,7 +67,69 @@
                 </h5>
             </div>
         </footer>
-    
-        <script src="script.js"></script>
-    </body>
+        
+
+        <script>
+            const decreaseButton = document.getElementById('decreaseButton');
+            const resetButton = document.getElementById('resetButton');
+            const increaseButton = document.getElementById('increaseButton');
+            const decreaseButton10 = document.getElementById('decreaseButton10');
+            const decreaseButton5 = document.getElementById('decreaseButton5');
+            const decreaseButton2 = document.getElementById('decreaseButton2');
+            const increaseButton2 = document.getElementById('increaseButton2');
+            const increaseButton5 = document.getElementById('increaseButton5');
+            const increaseButton10 = document.getElementById('increaseButton10');
+            const decreaseButtonRandom = document.getElementById('decreaseButtonRandom');
+            const increaseButtonRandom = document.getElementById('increaseButtonRandom');
+            const countLabel = document.getElementById('countLabel');
+            let count = 0;
+
+            decreaseButton.onclick = function(){
+                count--;
+                countLabel.textContent = count;}
+
+            resetButton.onclick = function(){
+                count = 0;
+                countLabel.textContent = count;} 
+
+            increaseButton.onclick = function(){
+                count++;
+                countLabel.textContent = count;}
+
+            decreaseButton10.onclick = function(){
+                count = count - 10;
+                countLabel.textContent = count;} 
+
+            decreaseButton5.onclick = function(){
+                count = count-5;
+                countLabel.textContent = count;}
+
+            decreaseButton2.onclick = function(){
+                count = count - 2;
+                countLabel.textContent = count;}
+
+            increaseButton10.onclick = function(){
+                count = count + 10;
+                countLabel.textContent = count;}
+
+            increaseButton5.onclick = function(){
+                count = count + 5;
+                countLabel.textContent = count;}
+
+            increaseButton2.onclick = function(){
+                count = count + 2;
+                countLabel.textContent = count;}
+
+            decreaseButtonRandom.onclick = function(){
+                let decreaseRandom = Math.floor(Math.random()*10+1)
+                count = count - decreaseRandom;
+                countLabel.textContent = count;}
+
+            increaseButtonRandom.onclick = function(){
+                let increaseRandom = Math.floor(Math.random()*10+1)
+                count = count + increaseRandom;
+                countLabel.textContent = count;}
+
+        </script>
+    </body> 
 </html>

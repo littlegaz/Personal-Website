@@ -347,3 +347,52 @@ h6{
     font-size: 2rem;
     text-align: center;
 }
+
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#countButtonMain{
+    text-align: center;
+}
+
+#countButtonExtra{
+    text-align: center;
+}
+
+#countButtonRandom{
+    text-align: center;
+}
+
+.countButtonMain{
+    padding: 10px 33.3px;
+    font-size: 1.5em;
+    background-color: #eeab47 ;
+}
+.countButtonExtra{
+    padding: 10px 22.4px;
+    font-size: 1.5em;
+    background-color: #eeab47 ;
+}
+.countButtonRandom{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #eeab47 ;
+}
+.countButtonExtra, .countButtonMain, .countButtonRandom{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.countButtonRandom:hover{
+    background-color: #f35a13;
+}
+.countButtonExtra:hover{
+    background-color: #f35a13;
+}
+.countButtonMain:hover{
+    background-color: #f35a13;
+}
