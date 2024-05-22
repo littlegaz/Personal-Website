@@ -429,9 +429,12 @@ h6{
     font-family: Helvetica, sans-serif;
 }
 
-#diceResult{
-    display: block;
-    text-align: center;
-    font-size: 4em;
-    font-family: Helvetica, sans-serif;
+.diceResult{
+    display: flex;
+    justify-content: center;
+}
+
+#dice1, #dice2, #dice3, #dice4, #dice5{ 
+    height: 150px;
+    width: 150px;
 }

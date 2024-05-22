@@ -48,8 +48,12 @@
         <div>
             <label id="diceLabel2">You have rolled:</label><br>
         </div>
-        <div>
-            <label id="diceResult"></label>
+        <div class="diceResult">
+            <img id="dice1"/>
+            <img id="dice2"/>
+            <img id="dice3"/>
+            <img id="dice4"/>
+            <img id="dice5"/>
         </div>
                   
        
@@ -75,38 +79,63 @@
             const diceResult = document.getElementById('diceResult');
 
             oneDice.onclick = function(){
-                let randomNumber1x1 = Math.floor(Math.random()*6 + 1)
-                diceResult.textContent = `${randomNumber1x1}`
+                let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
+                let randomNumber1x1 = Math.floor(Math.random()*6)
+                document.getElementById('dice1').src = diceImages[randomNumber1x1];
+                document.getElementById('dice2').src = '';
+                document.getElementById('dice3').src = '';
+                document.getElementById('dice4').src = '';
+                document.getElementById('dice5').src = '';
             }
 
             twoDice.onclick = function(){
-                let randomNumber2x1 = Math.floor(Math.random()*6 + 1);
-                let randomNumber2x2 = Math.floor(Math.random()*6 + 1);
-                diceResult.textContent = `${randomNumber2x1} and ${randomNumber2x2}`
+                let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
+                let randomNumber2x1 = Math.floor(Math.random()*6);
+                let randomNumber2x2 = Math.floor(Math.random()*6);
+                document.getElementById('dice1').src = diceImages[randomNumber2x1];
+                document.getElementById('dice2').src = diceImages[randomNumber2x2];
+                document.getElementById('dice3').src = '';
+                document.getElementById('dice4').src = '';
+                document.getElementById('dice5').src = '';
             }
 
             threeDice.onclick = function(){
-                let randomNumber3x1 = Math.floor(Math.random()*6 + 1);
-                let randomNumber3x2 = Math.floor(Math.random()*6 + 1);
-                let randomNumber3x3 = Math.floor(Math.random()*6 + 1);
-                diceResult.textContent = `${randomNumber3x1} and ${randomNumber3x2} and ${randomNumber3x3}`
+                let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
+                let randomNumber3x1 = Math.floor(Math.random()*6);
+                let randomNumber3x2 = Math.floor(Math.random()*6);
+                let randomNumber3x3 = Math.floor(Math.random()*6);
+                document.getElementById('dice1').src = diceImages[randomNumber3x1];
+                document.getElementById('dice2').src = diceImages[randomNumber3x2];
+                document.getElementById('dice3').src = diceImages[randomNumber3x3];
+                document.getElementById('dice4').src = '';
+                document.getElementById('dice5').src = '';
             }
 
             fourDice.onclick = function(){
-                let randomNumber4x1 = Math.floor(Math.random()*6 + 1);
-                let randomNumber4x2 = Math.floor(Math.random()*6 + 1);
-                let randomNumber4x3 = Math.floor(Math.random()*6 + 1);
-                let randomNumber4x4 = Math.floor(Math.random()*6 + 1);
-                diceResult.textContent = `${randomNumber4x1} and ${randomNumber4x2} and ${randomNumber4x3} and ${randomNumber4x4}`
+                let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
+                let randomNumber4x1 = Math.floor(Math.random()*6 );
+                let randomNumber4x2 = Math.floor(Math.random()*6 );
+                let randomNumber4x3 = Math.floor(Math.random()*6 );
+                let randomNumber4x4 = Math.floor(Math.random()*6 );
+                document.getElementById('dice1').src = diceImages[randomNumber4x1];
+                document.getElementById('dice2').src = diceImages[randomNumber4x2];
+                document.getElementById('dice3').src = diceImages[randomNumber4x3];
+                document.getElementById('dice4').src = diceImages[randomNumber4x4];
+                document.getElementById('dice5').src = '';
             }
 
             fiveDice.onclick = function(){
-                let randomNumber5x1 = Math.floor(Math.random()*6 + 1);
-                let randomNumber5x2 = Math.floor(Math.random()*6 + 1);
-                let randomNumber5x3 = Math.floor(Math.random()*6 + 1);
-                let randomNumber5x4 = Math.floor(Math.random()*6 + 1);
-                let randomNumber5x5 = Math.floor(Math.random()*6 + 1);
-                diceResult.textContent = `${randomNumber5x1} and ${randomNumber5x2} and ${randomNumber5x3} and ${randomNumber5x4} and ${randomNumber5x5}`
+                let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
+                let randomNumber5x1 = Math.floor(Math.random()*6 );
+                let randomNumber5x2 = Math.floor(Math.random()*6 );
+                let randomNumber5x3 = Math.floor(Math.random()*6 );
+                let randomNumber5x4 = Math.floor(Math.random()*6 );
+                let randomNumber5x5 = Math.floor(Math.random()*6 );
+                document.getElementById('dice1').src = diceImages[randomNumber5x1];
+                document.getElementById('dice2').src = diceImages[randomNumber5x2];
+                document.getElementById('dice3').src = diceImages[randomNumber5x3];
+                document.getElementById('dice4').src = diceImages[randomNumber5x4];
+                document.getElementById('dice5').src = diceImages[randomNumber5x5];
             }
 
         </script>
