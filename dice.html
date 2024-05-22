@@ -4,7 +4,7 @@
         <div class="header">
             <div class="bottom-bar">
                 <div class="headerText">    
-                    Portfolio
+                    Dice Rolls
                 </div> 
                 <div class="dropdown">
                     <div class="menu" onClick="menuIcon(this)">
@@ -31,31 +31,28 @@
             </div>                       
         </div>    
 
-                <!-- <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html"><img src="home.png" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="bio.html"><img src="about me.png" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="experience.html"><img src="experience.jpg" height= 50px width= 50px;></a></li>
-                    <li class="nav-item"><a href="portfolio main.html"><img src="portfolio.png" height= 50px width= 50px;></a></li> -->
-                <!-- </ul> -->
-           
-
-        
-
         <title>Personal Profile</title>
         <link rel="stylesheet" href="style.css" />
 
     </head>
    
-    <body>
-        <h2>Here is a sample of my work:</h2>
+    <body><br><br>
+        <label id="diceLabel">How many dice would you like to roll?</label><br>
+        <div id="howmanydice">
+            <Button id="onedice" class="howmanydice">One</Button>
+            <Button id="twodice" class="howmanydice">Two</Button>
+            <Button id="threedice" class="howmanydice">Three</Button>
+            <Button id="fourdice" class="howmanydice">Four</Button>
+            <Button id="fivedice" class="howmanydice">Five</Button>
+        </div><br>
+        <div>
+            <label id="diceLabel2">You have rolled:</label><br>
+        </div>
+        <div>
+            <label id="diceResult"></label>
+        </div>
                   
-        <p></p>
-
-        <a href="lightbulbs.html">Click here for chaos with lightbulbs</a><br><br>
-        <a href="RockPaperScissors.html">Click here for a game of Rock Paper Scissors</a><br><br>
-        <a href="shapes.html">Click here for shapes calculations</a><br><br>
-        <a href="counter.html">Click here for a uniquely functioning counter</a><br><br>
-        <a href="dice.html">Click here for a dice rolling</a><br><br>
+       
 
         <footer class="footer">
             <a id="footerface" href="https://www.facebook.com/KingGargeth"> <img src="images/facebook.png" alt="facebook"> </a>
@@ -69,6 +66,49 @@
             </div>
         </footer>
     
-        <script src="script.js"></script>
+        <script>
+            const oneDice = document.getElementById('onedice');
+            const twoDice = document.getElementById('twodice');
+            const threeDice = document.getElementById('threedice');
+            const fourDice = document.getElementById('fourdice');
+            const fiveDice = document.getElementById('fivedice');
+            const diceResult = document.getElementById('diceResult');
+
+            oneDice.onclick = function(){
+                let randomNumber1x1 = Math.floor(Math.random()*6 + 1)
+                diceResult.textContent = `${randomNumber1x1}`
+            }
+
+            twoDice.onclick = function(){
+                let randomNumber2x1 = Math.floor(Math.random()*6 + 1);
+                let randomNumber2x2 = Math.floor(Math.random()*6 + 1);
+                diceResult.textContent = `${randomNumber2x1} and ${randomNumber2x2}`
+            }
+
+            threeDice.onclick = function(){
+                let randomNumber3x1 = Math.floor(Math.random()*6 + 1);
+                let randomNumber3x2 = Math.floor(Math.random()*6 + 1);
+                let randomNumber3x3 = Math.floor(Math.random()*6 + 1);
+                diceResult.textContent = `${randomNumber3x1} and ${randomNumber3x2} and ${randomNumber3x3}`
+            }
+
+            fourDice.onclick = function(){
+                let randomNumber4x1 = Math.floor(Math.random()*6 + 1);
+                let randomNumber4x2 = Math.floor(Math.random()*6 + 1);
+                let randomNumber4x3 = Math.floor(Math.random()*6 + 1);
+                let randomNumber4x4 = Math.floor(Math.random()*6 + 1);
+                diceResult.textContent = `${randomNumber4x1} and ${randomNumber4x2} and ${randomNumber4x3} and ${randomNumber4x4}`
+            }
+
+            fiveDice.onclick = function(){
+                let randomNumber5x1 = Math.floor(Math.random()*6 + 1);
+                let randomNumber5x2 = Math.floor(Math.random()*6 + 1);
+                let randomNumber5x3 = Math.floor(Math.random()*6 + 1);
+                let randomNumber5x4 = Math.floor(Math.random()*6 + 1);
+                let randomNumber5x5 = Math.floor(Math.random()*6 + 1);
+                diceResult.textContent = `${randomNumber5x1} and ${randomNumber5x2} and ${randomNumber5x3} and ${randomNumber5x4} and ${randomNumber5x5}`
+            }
+
+        </script>
     </body>
 </html>

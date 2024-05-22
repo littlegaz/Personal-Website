@@ -396,3 +396,42 @@ h6{
 .countButtonMain:hover{
     background-color: #f35a13;
 }
+
+#diceLabel{
+    display: block;
+    text-align: center;
+    font-size: 5em;
+    font-family: Helvetica, sans-serif;
+}
+
+#howmanydice{
+    text-align: center;
+}
+
+.howmanydice{
+    height: 150px;
+    width: 150px;
+    border-radius: 25px;
+    font-size: 1.5em;
+    background-color: #eeab47 ;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.howmanydice:hover{
+    background-color: #f35a13;
+}
+
+#diceLabel2{
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    font-family: Helvetica, sans-serif;
+}
+
+#diceResult{
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    font-family: Helvetica, sans-serif;
+}
