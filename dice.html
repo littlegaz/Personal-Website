@@ -81,22 +81,22 @@
             oneDice.onclick = function(){
                 let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
                 let randomNumber1x1 = Math.floor(Math.random()*6)
-                document.getElementById('dice1').src = diceImages[randomNumber1x1];
-                document.getElementById('dice2').src = '';
-                document.getElementById('dice3').src = '';
-                document.getElementById('dice4').src = '';
-                document.getElementById('dice5').src = '';
+                document.getElementById('dice1').src = 'dicex.png';
+                document.getElementById('dice2').src = 'dicex.png';
+                document.getElementById('dice3').src = diceImages[randomNumber1x1];
+                document.getElementById('dice4').src = 'dicex.png';
+                document.getElementById('dice5').src = 'dicex.png';
             }
 
             twoDice.onclick = function(){
                 let diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png']
                 let randomNumber2x1 = Math.floor(Math.random()*6);
                 let randomNumber2x2 = Math.floor(Math.random()*6);
-                document.getElementById('dice1').src = diceImages[randomNumber2x1];
+                document.getElementById('dice1').src = 'dicex.png';
                 document.getElementById('dice2').src = diceImages[randomNumber2x2];
-                document.getElementById('dice3').src = '';
-                document.getElementById('dice4').src = '';
-                document.getElementById('dice5').src = '';
+                document.getElementById('dice3').src = 'dicex.png';
+                document.getElementById('dice4').src = diceImages[randomNumber2x1];
+                document.getElementById('dice5').src = 'dicex.png';
             }
 
             threeDice.onclick = function(){
@@ -104,11 +104,11 @@
                 let randomNumber3x1 = Math.floor(Math.random()*6);
                 let randomNumber3x2 = Math.floor(Math.random()*6);
                 let randomNumber3x3 = Math.floor(Math.random()*6);
-                document.getElementById('dice1').src = diceImages[randomNumber3x1];
+                document.getElementById('dice1').src = 'dicex.png';
                 document.getElementById('dice2').src = diceImages[randomNumber3x2];
                 document.getElementById('dice3').src = diceImages[randomNumber3x3];
-                document.getElementById('dice4').src = '';
-                document.getElementById('dice5').src = '';
+                document.getElementById('dice4').src = diceImages[randomNumber3x1];
+                document.getElementById('dice5').src = 'dicex.png';
             }
 
             fourDice.onclick = function(){
@@ -119,9 +119,9 @@
                 let randomNumber4x4 = Math.floor(Math.random()*6 );
                 document.getElementById('dice1').src = diceImages[randomNumber4x1];
                 document.getElementById('dice2').src = diceImages[randomNumber4x2];
-                document.getElementById('dice3').src = diceImages[randomNumber4x3];
+                document.getElementById('dice3').src = 'dicex.png';
                 document.getElementById('dice4').src = diceImages[randomNumber4x4];
-                document.getElementById('dice5').src = '';
+                document.getElementById('dice5').src = diceImages[randomNumber4x3];
             }
 
             fiveDice.onclick = function(){
