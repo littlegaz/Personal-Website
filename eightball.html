@@ -4,7 +4,7 @@
         <div class="header">
             <div class="bottom-bar">
                 <div class="headerText">    
-                    Portfolio
+                    8 Ball
                 </div> 
                 <div class="dropdown">
                     <div class="menu" onClick="menuIcon(this)">
@@ -29,24 +29,23 @@
                     </div>
                 </div>
             </div>                       
-        </div>    
+        </div>
 
         <title>Personal Profile</title>
         <link rel="stylesheet" href="style.css" />
 
     </head>
    
-    <body>
-        <h2>Here is a sample of my work:</h2>
-                  
-        <p></p>
+    <body><br><br>
+        <div id="eightballbutton">
+        <button id="eightballbutton1" class="eightballbutton"><span>Answer to a question</span><img src="8ball.png" alt="8ball" style="height: 200px; width: 300px;"></button>
+        <button id="eightballbutton2" class="eightballbutton"><span>Positivity quote</span><img src="8ball.png" alt="8ball" style="height: 200px; width: 300px;"></button>
+        </div> <br><br> 
 
-        <a href="lightbulbs.html">Click here for chaos with lightbulbs</a><br><br>
-        <a href="RockPaperScissors.html">Click here for a game of Rock Paper Scissors</a><br><br>
-        <a href="shapes.html">Click here for shapes calculations</a><br><br>
-        <a href="counter.html">Click here for a uniquely functioning counter</a><br><br>
-        <a href="dice.html">Click here for a dice rolling</a><br><br>
-        <a href="eightball.html">Click here for a magical 8-ball</a><br><br>
+        <div>
+            <label id="eightballresult">result here</label>
+        </div>
+
 
         <footer class="footer">
             <a id="footerface" href="https://www.facebook.com/KingGargeth"> <img src="images/facebook.png" alt="facebook"> </a>
@@ -59,7 +58,49 @@
                 </h5>
             </div>
         </footer>
-    
-        <script src="script.js"></script>
-    </body>
+        
+
+        <script>
+            const question = document.getElementById('eightballbutton1');
+            const positivity = document.getElementById('eightballbutton2');
+
+            question.onclick = function(){
+                let answers = [
+                    'Yes',
+                    'No',
+                    'It is certain',
+                    'Without a doubt',
+                    'Yes definitely',
+                    'Most likely',
+                    'All signs point to yes',
+                    'The outlook is good',
+                    'Ask again later',
+                    'Cannot predict now',
+                    'Concentrate and ask again',
+                    'Reply hazy, try again',
+                    'Dont count on it',
+                    'My reply is no',
+                    'My sources say no',
+                    'Outlook not so good',
+                    'Do I look like a wizard to you?',
+                    'Have you tried turning it off and back on again?',
+                    'Your Funera',
+                    'Just dont bother',
+                    'Please pass me to someone saner',
+                    'Could you please think before you ask me something?',
+                    'Im not nearly omnipotent enough for this',
+                    'Sure if you want a tragedy on your hands',
+                    'Oh a good omen!',
+                    'It wont work but it will be very funny',
+                    'Technically yes but youll hate it',
+                    'Help will come from an unexpected source... like, REALLY unexpected',
+                    'console.log(yes)',
+                    'console.log(no)',
+                ]
+                let questionAnswer = Math.floor(Math.random()*30)
+                eightballresult.textContent = answers[questionAnswer]
+            }
+
+        </script>
+    </body> 
 </html>

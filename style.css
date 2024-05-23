@@ -438,3 +438,33 @@ h6{
     height: 150px;
     width: 150px;
 }
+
+#eightballbutton{
+    text-align: center;
+}
+
+.eightballbutton{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    font-size: 3em;
+    border-radius: 125px;
+    background-color: #eeab47;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s;
+}
+
+.eightballbutton img {
+    display: none;
+    position: absolute;
+
+}
+
+.eightballbutton:hover img{
+    display: block;
+    border-radius: 125px;
+}
