@@ -468,3 +468,14 @@ h6{
     display: block;
     border-radius: 125px;
 }
+
+#eightballresult {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.eightballresult{
+    max-width: 40%;
+    padding: 25px;
+    text-align: center;
+}
