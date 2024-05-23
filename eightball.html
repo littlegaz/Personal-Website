@@ -101,6 +101,38 @@
                 eightballresult.textContent = answers[questionAnswer]
             }
 
+            positivity.onclick = function(){
+                let quotes = [
+                    'Nothing is impossible, the word itself says Im possible',
+                    'The most important thing is to try and inspire people so that they can be great in whatever they want to do',
+                    'Once you replace negative thoughts with positive ones, youll start having positive results',
+                    'If you dont like the road youre walking, start paving another one',
+                    'A dead end is just a good place to turn around',
+                    'In every day, there are 1,440 minutes. That means we have 1,440 daily opportunities to make a positive impact',
+                    'Live life to the fullest, and focus on the positive',
+                    'Life is like a bicycle. To keep your balance, you must keep moving',
+                    'Setting goals is the first step in turning the invisible into the visible',
+                    'Your attitude is critical to success. If you expect things to be difficult, it will always be easier to solve problems, overcome adversity, and have an enthusiastic energy about how you go about and enjoy your work.',
+                    'Success is falling nine times and getting up ten',
+                    'Be so happy that, when other people look at you, they become happy too',
+                    'Say something positive, and youll see something positive',
+                    'Stay positive. Better days are on their way',
+                    'Only in the darkness can you see the stars',
+                    'Just for the record, not all positive change feels positive in the beginning',
+                    'Today is a good day to try',
+                    'Choose to be optimistic, it feels better',
+                    'Attitude is a little thing that makes a big difference',
+                    'You are never too old to set another goal or to dream a new dream',
+                    'Believe you can and youre halfway there',
+                    'Real change, enduring change, happens one step at a time',
+                    'Hard things will happen to us. We will recover. We will learn from it. We will grow more resilient because of it',
+                    'You just gotta keep going and fighting for everything, and one day you’ll get to where you want',
+                    'There is no way around the hard work. Embrace it',
+                ]
+                let pickQuote = Math.floor(Math.random()*25)
+                eightballresult.textContent = quotes[pickQuote]
+            }
+
         </script>
     </body> 
 </html>
