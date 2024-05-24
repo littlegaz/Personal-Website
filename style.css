@@ -439,7 +439,7 @@ h6{
     width: 150px;
 }
 
-#eightballbutton{
+.eightballbuttons{
     text-align: center;
 }
 
@@ -478,4 +478,52 @@ h6{
     max-width: 40%;
     padding: 25px;
     text-align: center;
+}
+
+.temperaturebody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(40, 30%, 96%);
+}
+
+.temperatureh1{
+    color: #242457;
+}
+
+.temperatureform{
+    background-color:  hsl(49, 94%, 67%);
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px hsl(39, 92%, 65%);
+}
+
+#temperaturetextbox{
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 5px; 
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.temperaturelabel{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.temperaturebutton{
+    margin-top: 25px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px hsl(39, 92%, 65%);
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+}
+
+#temperatureresult{
+    font-size: 1.7em;
+    font-weight: bold;
 }
